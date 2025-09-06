@@ -14,7 +14,7 @@
         <div class="factura-container">
             <div class="header">
                 <div class="logo">
-                    <img src="./imagenes/image.png" alt="Logo de la empresa">
+                    <img src="./factura.png" alt="Logo de la empresa">
                     <strong>ESTUDIOS<br>CREATIVOS</strong>
                 </div>
                 <div class="titulo-factura">
@@ -221,19 +221,22 @@
 
         .totales {
             margin-top: 20px;
-            justify-content: right;
             display: flex;
-
-            .nom {
-                padding-right: 30px;
-                text-align: right;
-            }
-
-            h4 {
-                padding-top: 10px;
-            }
-
+            margin-right: 40px;
+            margin-left: 350px;
+            place-content: space-between;
         }
+
+        .nom {
+            padding-right: 30px;
+            text-align: right;
+        }
+
+        h4 {
+            padding-top: 10px;
+        }
+
+
 
         .totales div p {
             margin: 5px 0;
@@ -277,60 +280,62 @@
 
         .all {
             width: 700px;
-            height: 900px;
+
             display: flex;
             justify-content: center;
         }
-      
+
         @media (max-width: 800px) {
-        .header {
-            grid-template-columns: 1fr;
-            text-align: center;
+            .header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cliente {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .titulo-factura h1 {
+                font-size: 40px;
+            }
+
+            .gracias {
+                font-size: 2em;
+            }
         }
 
-        .cliente {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+        @media (max-width: 600px) {
+            .factura-container {
+                width: 100%;
+                padding: 10px;
+            }
 
-        .titulo-factura h1 {
-            font-size: 40px;
-        }
+            .datos-pago {
+                padding-top: 10px;
+            }
 
-        .gracias {
-            font-size: 2em;
-        }
-    }
+            .logo img {
+                max-width: 250px;
+            }
 
-    @media (max-width: 600px) {
-        .factura-container {
-            width: 100%;
-            padding: 10px;
-        }
+            table,
+            th,
+            td {
+                font-size: 0.85em;
+            }
 
-        .datos-pago {
-            padding-top: 10px;
-        }
+            .final {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-        .logo img {
-            max-width: 250px;
+            .gracias {
+                margin-top: 20px;
+            }
         }
-
-        table, th, td {
-            font-size: 0.85em;
-        }
-
-        .final {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .gracias {
-            margin-top: 20px;
-        }
-    }
     </style>
 </body>
 
